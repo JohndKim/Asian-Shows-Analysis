@@ -1,0 +1,45 @@
+/* Basic styling for prettyprint */
+.prettyprint {
+    font-family: "Menlo", "Monaco", "Consolas", monospace !important;
+    background: #20364C;
+    background-color: gray;
+    border-radius: 2px;
+    border: none !important;
+    padding: 20px !important;
+    font-size: 16px;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+  }
+  
+  /* Adds linenums to each line listed when .linenums class used */
+  li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
+    list-style-type: decimal;
+  }
+  
+  /* Adds individual lines to prettyprint */
+  ol.linenums {
+    counter-reset: linenumber;
+  }
+  
+  /* Adds single increments and disables the background for alternating line numbers */
+  ol.linenums li {
+    list-style-type: none;
+    counter-increment: linenumber;
+    background: transparent !important;
+  }
+  
+  ol.linenums li:before {
+    content: counter(linenumber);
+    float: left;
+    margin-left: -4em;
+    text-align: right;
+    width: 3em;
+  }
